@@ -1,0 +1,360 @@
+	/* //////////////////////////////Changes headers///////////////////////////////////////*/
+		li {
+		   color:white;
+		   }
+
+		h1 { 
+		   color:white;
+		   background-color:black;
+		 text-align:center;
+		  }
+		h2 {
+		   color:white;
+		   text-align:center;
+		   padding:5px;
+		   font-size:300%;
+		 
+		   }
+		   
+		h3{
+		   color:white;
+		   padding:10px;
+		   font-size:150%;
+		   background-color:black;
+		  }
+		h4{
+		   color:white;
+		   float:right;
+		   padding:5px;
+		   font-size:300%;
+		  }
+		body { background-color: gray;
+		  background-size: cover;
+			
+				
+					 }
+
+		
+	/* //////////////////////////////For Page Layout ///////////////////////////////////////*/			   		  
+		
+		#wrapper {
+			width: 80%;
+			height: 80%;
+			font-family: Arial,Verdana;
+			font-size: 100%;
+			color:white;
+			background-color:black;
+			margin-left: auto;
+			margin-right: auto;
+			-moz-box-shadow: -5px -5px 5px #888;
+			-webkit-box-shadow: -5px -5px 5px #888;
+			 box-shadow: -5px -5px 5px #888;
+				 }
+		
+		#header  {  
+				  
+				   padding:10px;         
+				   background-color:white;
+				   text-align:center;
+					}  
+
+		#menu {
+				   float:left;
+				   width: 5%;
+				   height: 800px;
+				   padding:5px;
+				   background-color:black;
+				   
+				  
+					}
+		#menu h1	{
+			font-size: 120%;
+		}
+
+
+		#content {
+				   
+				   
+				   background-color:black;
+				   text-align:center;
+				   }
+				   
+
+		#footer {  clear:both; 
+				   text-align:center;
+				   font-size:80%;
+				   background-color:white; 
+				   color:black;
+				   width:100%;
+				   -webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				   
+				   
+				   }
+		#data { margin-left:600px;
+		background-color:black;
+					}
+
+		#data2{ margin-left:200px;
+		background-color:black;
+					}	
+		#data3 { margin-left:450px;
+		background-color:black;
+					}
+					
+		#homepage{  
+				   float:right;
+				   padding:10px;
+				   border-right:1px solid #333333;
+				   background-color:orange;
+					}
+				   
+				
+		#video {  vertical-align:text-top;
+					
+				  
+					}
+
+		#rightpic{ position:absolute;
+				   right:5px; 
+				  
+				  
+					}
+
+		#body { 
+				background-image: url("background.gif");
+					 }
+
+
+		 
+		#bioheader {
+				  font-stretch: expanded;
+		} 
+	    
+		#textareabio
+		 {
+				   float:left;
+				   padding:50px;
+				   background:url("bottomBackground.gif");
+				   width:875px
+		  
+		  }
+		  #map {
+        height: 400px;
+        width: 80%;
+		right:-50px;
+       }
+	/* //////////////////////////////For Images at top of page ///////////////////////////////////////*/
+
+	.img1 {
+		width: 100%;
+				   height: 150px;
+				   float: center
+				   }
+	.img2{
+		width: 250px;
+				   height: 150px;
+				   }
+				   
+	/* //////////////////////////////For Buttons ///////////////////////////////////////*/
+
+	.nextRight {
+		background:url(nextright.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+	.nextLeft {
+		background:url(nextleft.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+	.showData {
+		background:url(data.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+	.navButton0 {
+		background:url(homebutton.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+
+		.navButton1 {
+		background:url(page1.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+		.navButton2 {
+		background:url(page2.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+		.navButton3 {
+		background:url(page3.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+		.navButton4 {
+		background:url(page4.gif) no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		display: block;
+		}
+		.nextRight :hover {
+		background:url(nextright1.gif) no-repeat;
+		}
+		.nextLeft :hover {
+		background:url(nextleft1.gif) no-repeat;
+		}
+		.showData :hover {
+		background:url(data1.gif) no-repeat;
+		}
+		.navButton0 :hover {
+		background:url(homebutton1.gif) no-repeat;
+		}
+		.navButton1 :hover {
+		background:url(page1.2.gif) no-repeat;
+		}
+		.navButton2 :hover {
+		background:url(page2.2.gif) no-repeat;
+		}
+		.navButton3 :hover {
+		background:url(page3.2.gif) no-repeat;
+		}
+		.navButton4:hover {
+		background:url(page4.2.gif) no-repeat;
+		}
+		
+		.navLink1 {
+		width: 100%;
+		height: 100%;
+		display: block;
+		}
+	
+
+		   
+		
+	/* //////////////////////////////Layout of images ///////////////////////////////////////*/
+		  ul.rig {
+		list-style: none;
+		font-size: 0px;
+		margin-left: -35.5%; 
+	}
+	ul.rig li {
+		display: inline-block;
+		padding: 10px;
+		margin: 2.5% 0 1% 1%;
+		background-color: gray;
+		border: 1px solid #ddd;
+		font-size: 16px;
+		font-size: 1rem;
+		vertical-align: top;
+		box-shadow: 0 0 5px #ddd;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	ul.rig li img {
+		max-width: 100%;
+		height: auto;
+		margin: 0 0 10px;
+	}
+	ul.rig li h3 {
+		margin: 0 0 5px;
+		
+	}
+	ul.rig li p {
+		font-size: .9em;
+		line-height: 1.5em;
+		color: white;
+		background-color:black;
+	}
+
+	ul.rig.columns-2 li {
+		width: 30%; 
+	}
+
+	ul.rig.columns-3 li {
+		width: 30%; 
+	}
+
+	ul.rig.columns-4 li {
+		width: 30%; 
+	}
+
+
+
+	/* //////////////////////////////For Validation form ///////////////////////////////////////*/
+	.form_car {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1500px;
+		
+		padding: 20px 30px 20px 30px;
+		color: White;
+		text-shadow: 1px 1px 1px #444;
+		border: none;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+	.form_car h1 {
+		padding: 0px 0px 10px 40px;
+		display: block;
+		border-bottom: 1px solid #444;
+		margin: -10px -30px 30px -30px;
+	}
+	.form_car h1>span {
+		display: block;
+		font-size: 11px;
+	}
+	.form_car label {
+		display: block;
+		margin: 0px 0px 5px;
+	}
+	.form_car label>span {
+		float: left;
+		width: 20%;
+		text-align: right;
+		padding-right: 10px;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+	.form_car input[type="text"], .form_car input[type="password"], .form_car input[type="email"], .form_car textarea {
+		border: none;
+		height: 25px;
+		line-height:15px;
+		margin-bottom: 16px;
+		margin-right: 6px;
+		margin-top: 2px;
+		outline: 0 none;
+		padding: 5px 0px 5px 5px;
+		width: 70%;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		}
+
+
+
+
+
+ 
+
