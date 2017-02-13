@@ -13,3 +13,5 @@ I should be able to link the two after this.
 .If your still leanring github, please make your first pull request and commit
 .Any issue please message through github or facebook
 >Got until friday to get most of this protype finished
+
+I'm struggling to get my php server to load up my page
