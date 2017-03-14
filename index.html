@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <link href="stylesheet.css" rel="stylesheet" type="text/css">
-    <script src="Javascript/JS.js">
-		
-    </script>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<!--<script src="Javascript/JS.js">-->
+	</script>
 </head>
-<body onload="carousel()">
+<body>
 	<section id="externalWrapper">
 		<h2 style="display:none;">.</h2>
 		<nav>
 			<ul>
 				<li>
-					<a href="index.html" id="logo" class="active">OCM</a>	
+					<a href="index.php" id="logo">Student Helper</a>
 				</li>
-				<li>
-					<a href="browse.html">Browse</a>
-				</li>
-				<li>
-					<a href="login.html">Sign Up/Login</a>
-				</li>
-				<!-- <li>
-					<a href="index.html">My Bookings</a>
-				</li>
-				<li>
-					<a href="index.html">My Account</a>
-				</li> -->
 			</ul>
 		</nav>
 		<section id="internalWrapper">
 			<div class="row cf">
-				<h2>Welcome to Outdoor Centre Manager</h2>
-			</div>
-			<div class="row cf">
 				<div class="half">
-					<img class="slideshow fadingAnimation" src="images/bushyGarden.jpg" alt="An image of a garden at Bushy wood.">
-					<img class="slideshow fadingAnimation" src="images/bushyTent.jpg" style="display:none;" alt="An image of a tent in a clearing at Bushy wood.">
+					<form action="php/login.php" method="post">
+						<div class="row cf">
+							<div class="full">
+								<h2>Login</h2>
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="half">
+								<p class="inputName">Email address:</p>
+							</div>
+							<div class="half">
+								<input id="email" name="email" required="" type="email">
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="half">
+								<p class="inputName">Password:</p>
+							</div>
+							<div class="half">
+								<input id="password" name="password" required="" type="password">
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="threeQuarters">
+								<a class="button" href="signUp.html">Forgot logon credentials</a>
+							</div>
+							<div class="quarter">
+								<!--<button id="submit" href="myAccount.html" class="button">Submit</button>-->
+								<a href="mainPage.html" id="submit" href="myAccount.html" class="button">Submit</a>
+							</div>
+						</div>
+					</form>
 				</div>
 				<div class="half">
-					<p>Outdoor Centre Manager, the easy way to manage bookings for your outdoor centre. Designed for use by Campsites, Outdoor activity centres and more.</p>
+					<form>
+						<div class="row cf">
+							<div class="full">
+								<h2>Sign up</h2>
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="full">
+								<a class="button" href="signUp.html">New user?</a>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
-			<div class="row cf">
-				<div class="full">
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-				</div>
-			</div>
-			<footer>
+			
+			
+		</section>
+		
+	</section>
+	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<!--<h1>Developer's Email: alex324@hotmail.co.uk</h1>-->
+				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"
 						alt="Valid CSS!" />
 				</a>
 			</footer>
-		</section>
-	</section>
-	
 </body>
 </html>
