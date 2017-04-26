@@ -1,5 +1,5 @@
 <?php
-require 'configure.php';
+require 'Database/configure.php';
 
 session_start();
 if(!$_SESSION['loggedIn']) {

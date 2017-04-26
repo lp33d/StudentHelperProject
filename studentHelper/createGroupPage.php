@@ -12,7 +12,7 @@ if(!$_SESSION['loggedIn']) {
 	<meta charset="UTF-8">
 	<title>Create Group</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-
+	<script src="javascript.js"></script>
 </head>
 <body>
 	<section id="externalWrapper">
@@ -32,7 +32,7 @@ if(!$_SESSION['loggedIn']) {
 					<a href="routeFinder.php">Route Finder</a>
 				</li>
 				<li>
-					<a href="courseworkDropoff.php">Coursework Dropoff</a>
+					<a href="courseworkDropoffStud.php">Coursework Dropoff</a>
 				</li>
 				<li>
 					<a href="logout.php">Logout</a>
@@ -103,23 +103,17 @@ value="no"> No
 						</div>
 						<div class="row cf">
 							<div class="quarter">
-								<input type="submit" id="submit" class="button" value="Submit" onclick="newContent()">
+								<input type="submit" id="submit" class="button" value="Submit" onclick="newGroup()">
 							</div>
 						</div>
 					</form>
 
-					<script>
-					function newContent() {
-						alert("Study Group Added! ");
-					}
-				</script>
 				</div>
 			</div>
 		</section>
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"

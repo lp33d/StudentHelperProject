@@ -40,37 +40,63 @@ if(!$_SESSION['loggedIn']) {
 		</nav>
 		<section id="internalWrapper">
 			<div class="row cf">
-				<div class="half">
+				<form name="createGroup" action="LectaddRoom.php" method="post">
 					<div class="row cf">
 						<div class="full">
-							<a href="createGroup.html">Add Room</a>
+							<h2>Add Room</h2>
 						</div>
 					</div>
-
-				</div>
+					<div class="row cf">
+						<div class="half">
+							<p class="inputName" name="build_name">Building name</p>
+						</div>
+						<div class="half">
+							<input id="buildingName" name="buildingName" required="true" type="text">
+						</div>
+					</div>
+					<div class="row cf">
+						<div class="half">
+							<p class="inputName" name="room_name">Room Name / Number:</p>
+						</div>
+						<div class="half">
+							<input id="roomName" name="roomName" required="true" type="text">
+						</div>
+					</div>
+					<div class="row cf">
+						<div class="half">
+							<p class="inputName" name="theProjector">Room With Projector:</p>
+						</div>
+						<div class="half">
+							<input type="radio" name="projector"
+				<?php if (isset($projector) && $projector=="yes") echo "checked";?>
+				value="yes"> Yes
+				<input type="radio" name="projector"
+				<?php if (isset($projector) && $projector=="no") echo "checked";?>
+				value="no"> No
+						</div>
+					</div>
+						<div class="row cf">
+							<div class="half">
+								<p class="inputName">Max Students (1 - 999): </p>
+							</div>
+							<div class="half">
+								<input name="maxStudents" required="true" pattern="([0-9]|[0-9][0-9][0-9]|[0-9][0-9])">
+							</div>
+					</div>
+					<div class="row cf">
+						<div class="quarter">
+							<input type="submit" id="submit" class="button" value="Submit" onclick="successfull()">
+						</div>
+					</div>
+				</form>
 
 			</div>
-			<div class="row cf">
 
-
-			</div>
-
-			<ul>
-<form name="createGroup" action="createGroup.php" method="POST" >
-<li>Building:</li><li><input type="text" name="StudyName" /></li>
-<li>Room Number:</li><li><input type="text" name="room_name" /></li>
-<li>Projector:</li><li><input type="text" name="projector" /></li>
-<li>Number_Of_students:</li><li><input type="text" name="numOfStud" /></li>
-<li>Timings</li><li><input type="text" name="time" /></li>
-<li><input type="submit" /></li>
-</form>
-</ul>
 		</section>
 
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"

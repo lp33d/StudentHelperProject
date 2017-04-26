@@ -14,8 +14,7 @@ if(!$_SESSION['loggedIn']) {
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-	<!--<script src="Javascript/JS.js">-->
-	</script>
+	
 </head>
 <body>
 	<section id="externalWrapper">
@@ -84,7 +83,6 @@ if(!$_SESSION['loggedIn']) {
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"
