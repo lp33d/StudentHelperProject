@@ -10,8 +10,6 @@ What we still need to finish by Friday is:
 Code that still needs to be finished is:
  
 -Student & Lecturer cw dropoff 
--Remove student from database
--Lect add room
 -Student join group
 
 
