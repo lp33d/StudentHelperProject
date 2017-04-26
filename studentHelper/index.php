@@ -1,10 +1,20 @@
+<?php
+session_start();
+$_SESSION['loggedIn']=false;
+if(!$_SESSION['loggedIn']) {
+	// header('location: index.php');
+} else {
+	header('location: mainPage.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-	<script src="Javascript/JS.js">
+	<!--<script src="Javascript/JS.js">-->
 	</script>
 </head>
 <body>
@@ -13,20 +23,14 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="index.php" id="logo">OCM</a>
-				</li>
-				<li>
-					<a href="browse.php">Browse</a>
-				</li>
-				<li>
-					<a class="active" href="login.html">Sign Up/Login</a>
+					<a href="index.php" id="logo">Student Helper</a>
 				</li>
 			</ul>
 		</nav>
 		<section id="internalWrapper">
 			<div class="row cf">
 				<div class="half">
-					<form action="php/login.php" method="post">
+					<form action="login.php" method="post">
 						<div class="row cf">
 							<div class="full">
 								<h2>Login</h2>
@@ -37,7 +41,7 @@
 								<p class="inputName">Email address:</p>
 							</div>
 							<div class="half">
-								<input id="email" name="email" required="" type="email">
+								<input id="Eail" name="Email" required="true" type="text">
 							</div>
 						</div>
 						<div class="row cf">
@@ -45,7 +49,7 @@
 								<p class="inputName">Password:</p>
 							</div>
 							<div class="half">
-								<input id="password" name="password" required="" type="password">
+								<input id="password" name="password" required="true" type="password">
 							</div>
 						</div>
 						<div class="row cf">
@@ -53,7 +57,7 @@
 								<a class="button" href="signUp.html">Forgot logon credentials</a>
 							</div>
 							<div class="quarter">
-								<button id="submit" href="myAccount.html" class="button">Submit</button>
+								<button type="submit" id="submit" class="button" >Submit</button>
 							</div>
 						</div>
 					</form>
@@ -73,7 +77,12 @@
 					</form>
 				</div>
 			</div>
-			<footer>
+
+
+		</section>
+
+	</section>
+	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
 				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -82,7 +91,5 @@
 						alt="Valid CSS!" />
 				</a>
 			</footer>
-		</section>
-	</section>
 </body>
 </html>
