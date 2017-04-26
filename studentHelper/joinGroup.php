@@ -7,12 +7,6 @@ require 'configure.php';
 $_POST['submit']='true';
 $conn=mysqli_connect(DB_SERVER, DB_USER, DB_PASS, MYSQL_DB);
 
-
-$data = mysql_query("use studenthelper; SELECT * FROM studygroup") or die(mysql_error()); 
-  while($row = mysql_fetch_assoc($data)){
-    echo "No: ".$row['No'].", Name:".$row['studyName']
-    .", Surname:".$row['subject']."<br/>";
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,6 +46,24 @@ $data = mysql_query("use studenthelper; SELECT * FROM studygroup") or die(mysql_
 		<section id="internalWrapper">
 
 			<div class="row cf">
+	
+			<?php
+			$sql = "SELECT studyName, room, subject, date, time FROM studygroup";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+	   echo "<table><tr><th>Study Group Name</th><th>Room</th><th>Subject Name</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["studyName"]."</td><td>".$row["room"]."</td><td>".$row["subject"]."</td></tr>";
+    }
+    echo "</table>";
+   
+} else {
+    echo "0 results";
+}
+$conn->close();?>
+
 
 				<div class="half">
 					   <ul>
