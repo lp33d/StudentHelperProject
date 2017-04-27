@@ -10,7 +10,7 @@ What we still need to finish by Friday is:
 Code that still needs to be finished is:
  
 -Student & Lecturer cw dropoff 
--Student join group
+
 
 
 
