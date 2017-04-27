@@ -111,10 +111,13 @@ if(!$_SESSION['loggedIn']) {
 								</div>
 								<div class="half">
 									<select id="start">
+										<option value="Buckingham Building, Portsmouth">Anglesea Building</option>
 										<option value="Buckingham Building, Portsmouth">Buckingham Building</option>
 										<option value="Portland Building, Portsmouth">Portland Building</option>
 										<option value="James Watson Hall, Guildhall Walk, Portsmouth">James Watson Halls</option>
 										<option value="Lion Gate Building, Portsmouth">Lion Gate Building</option>
+										<option value="Spinnaker Sports Centre, Cambridge Road, Portsmouth">Spinnaker Sports Centre </option>
+										<option value="Park Building, Portsmouth">Park Building</option>
 										<option value="The University Library, University of Portsmouth, Cambridge Road, Portsmouth">UoP Library</option>
 									</select>
 								</div>
@@ -125,11 +128,15 @@ if(!$_SESSION['loggedIn']) {
 								</div>
 								<div class="half">
 									<select id="end">
+										<option value="Buckingham Building, Portsmouth">Anglesea Building</option>
 										<option value="Buckingham Building, Portsmouth">Buckingham Building</option>
 										<option value="Portland Building, Portsmouth">Portland Building</option>
 										<option value="James Watson Hall, Guildhall Walk, Portsmouth">James Watson Halls</option>
 										<option value="Lion Gate Building, Portsmouth">Lion Gate Building</option>
+										<option value="Spinnaker Sports Centre, Cambridge Road, Portsmouth">Spinnaker Sports Centre </option>
+										<option value="Park Building, Portsmouth">Spinnaker Sports Centre </option>
 										<option value="The University Library, University of Portsmouth, Cambridge Road, Portsmouth">UoP Library</option>
+
 									</select>
 								</div>
 						<script
@@ -144,7 +151,6 @@ if(!$_SESSION['loggedIn']) {
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"

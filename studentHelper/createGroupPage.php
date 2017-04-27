@@ -4,6 +4,11 @@ session_start();
 if(!$_SESSION['loggedIn']) {
 	header('location: index.php');
 }
+
+require 'Database/configure.php';
+$_POST['submit']='false';
+$conn=mysqli_connect(DB_SERVER, DB_USER, DB_PASS, MYSQL_DB);
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +17,7 @@ if(!$_SESSION['loggedIn']) {
 	<meta charset="UTF-8">
 	<title>Create Group</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-
+	<script src="javascript.js"></script>
 </head>
 <body>
 	<section id="externalWrapper">
@@ -32,7 +37,7 @@ if(!$_SESSION['loggedIn']) {
 					<a href="routeFinder.php">Route Finder</a>
 				</li>
 				<li>
-					<a href="courseworkDropoff.php">Coursework Dropoff</a>
+					<a href="courseworkDropoffStud.php">Coursework Dropoff</a>
 				</li>
 				<li>
 					<a href="logout.php">Logout</a>
@@ -66,28 +71,34 @@ if(!$_SESSION['loggedIn']) {
 						</div>
 						<div class="row cf">
 							<div class="half">
-								<p class="inputName" name="theProjector">Room With Projector:</p>
+								<p class="inputName" name="room_name">Building and Room Name:</p>
 							</div>
-							<div class="half">
-								<input type="radio" name="projector"
-<?php if (isset($projector) && $projector=="yes") echo "checked";?>
-value="yes"> Yes
-<input type="radio" name="projector"
-<?php if (isset($projector) && $projector=="no") echo "checked";?>
-value="no"> No
+							<div class="full">
+								<select name="room">
+									<?php
+									$rooms="SELECT buildingName, roomName, maxStudents, projector FROM room";
+									if(isset($rooms)) {
+										$sql=$conn->query($rooms);
+
+										while ($row = $sql->fetch_assoc()){
+											unset($buildingName, $roomName, $maxStudents);
+											$buildingName = $row['buildingName'];
+											$roomName = $row['roomName'];
+											$maxStudents = $row['maxStudents'];
+											$projector = $row['projector'];
+											echo '<option value="'.$buildingName. " " . $roomName.'">'.$buildingName." " . $roomName. " (Max students: " . $maxStudents . ")" . " Projector: " . $projector .'</option>';
+
+										};
+										echo "<input name='maxStudents' hidden=true  value='{$maxStudents}'>";
+										echo "<input name='projector' hidden=true  value='{$projector}'>";
+									};
+									?>
+								</select>
 							</div>
 						</div>
 						<div class="row cf">
 							<div class="half">
-								<p class="inputName" name="room_name">Room Name:</p>
-							</div>
-							<div class="half">
-								<input id="roomName" name="room" required="true" type="text">
-							</div>
-						</div>
-						<div class="row cf">
-							<div class="half">
-								<p class="inputName">Date (DD/MM/YYYY) :</p>
+								<p class="inputName">Date (DD/MM/YYYY):</p>
 							</div>
 							<div class="half">
 								<input name="date" required="" type="date" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
@@ -95,7 +106,7 @@ value="no"> No
 						</div>
 						<div class="row cf">
 							<div class="half">
-								<p class="inputName">Time (1 Hour Session HH:MM ) : </p>
+								<p class="inputName">Time (1 Hour Session HH:MM ):</p>
 							</div>
 							<div class="half">
 								<input name="time" required="" type="time" pattern="(0[0-9]|1[0-9]|2[0-3])(:[0-5][0-9])">
@@ -103,23 +114,16 @@ value="no"> No
 						</div>
 						<div class="row cf">
 							<div class="quarter">
-								<input type="submit" id="submit" class="button" value="Submit" onclick="newContent()">
+								<input type="submit" id="submit" class="button" value="Submit" onclick="newGroup()">
 							</div>
 						</div>
 					</form>
-
-					<script>
-					function newContent() {
-						alert("Study Group Added! ");
-					}
-				</script>
 				</div>
 			</div>
 		</section>
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"

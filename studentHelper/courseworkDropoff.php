@@ -44,7 +44,7 @@ if(!$_SESSION['loggedIn']) {
 						<div class="full">
 							<a href="joinGroup.html">Remove Drop Off Point</a>
 						</div>
-					</div>															<?php
+					</div>							<!-- 								<?php
 $db = pg_connect("host=localhost port=5432 dbname=studyGroup user=postgres password=password");
 $result = pg_query($db, "SELECT * FROM room where study_name = '$_POST[studyName]'");
 $row = pg_fetch_assoc($result);
@@ -74,7 +74,7 @@ echo "Update failed!!";
 echo "Update successfull;";
 }
 }
-?>
+?> -->
 					<div class="row cf">
 						<div class="half">
 
@@ -131,7 +131,6 @@ echo "Update successfull;";
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="mailto:support@outdoorcentremanager.co.uk">Support</a>
 				<a href="http://jigsaw.w3.org/css-validator/check/referer">
 					<img style="border:0;width:88px;height:31px"
 						src="http://jigsaw.w3.org/css-validator/images/vcss"
@@ -139,11 +138,11 @@ echo "Update successfull;";
 				</a>
 			</footer>
 </body>
-</html>
+</html> <!--
 <?php
 $db = pg_connect("host=localhost port=5432 dbname=studyGroup user=postgres password=password");
 $query = "INSERT INTO studyRoom VALUES ('$_POST[StudyName]',
 '$_POST[room]','$_POST[no_students]','$_POST[date]',
 '$_POST[time]')";
 $result = pg_query($query);
-?>
+?> -->

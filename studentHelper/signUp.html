@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="images/favicon.ico">
+  <script type="text/javascript" src="javascript.js"></script>
+</head>
+
+<body>
+  <section id="externalWrapper">
+    <h2 style="display:none;">.</h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.php" id="logo">Student Helper</a>
+        </li>
+      </ul>
+    </nav>
+		<section id="internalWrapper">
+			<div class="row cf">
+				<h2>Sign Up</h2>
+			</div>
+			<form action="signUp.php" method="post">
+				<div class="row cf">
+					<div class="half">
+						<p class="inputName">First name:</p>
+					</div>
+					<div class="half">
+						<input name="fName" type="text" required>
+					</div>
+				</div>
+				<div class="row cf">
+					<div class="half">
+						<p class="inputName">Last name:</p>
+					</div>
+					<div class="half">
+						<input name="lName" type="text" required>
+					</div>
+				</div>
+				<div class="row cf">
+					<div class="half">
+						<p class="inputName">Email address:</p>
+					</div>
+					<div class="half">
+						<input name="email" type="email" id=email required>
+					</div>
+				</div>
+				<div class="row cf">
+					<div class="half">
+						<p class="inputName">Confirm email address:</p>
+					</div>
+					<div class="half">
+						<input name="confirmEmail" type="email" id=confirmEmail required>
+					</div>
+				</div>
+				<div class="row cf">
+					<div class="half">
+						<p class="inputName">Password:</p>
+					</div>
+					<div class="half">
+						<input name="password" type="password" id=password required>
+					</div>
+				</div>
+				<div class="row cf">
+					<div class="half">
+            <button type="reset" class="button" id="reset">Reset</button>
+					</div>
+					<div class="half">
+						<button id="submit" name="submit" class="button">Submit</button>
+
+					</div>
+				</div>
+			</form>
+      <a href="index.php" class ="button" id="back">Go Back</a>
+		</section>
+	</section>
+  <footer>
+				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;width:88px;height:31px"
+						src="http://jigsaw.w3.org/css-validator/images/vcss"
+						alt="Valid CSS!" />
+				</a>
+			</footer>
+</body>
+</html>
