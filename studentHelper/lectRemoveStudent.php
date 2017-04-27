@@ -11,6 +11,6 @@ $email = $_POST['StudentEmail'];
 $result = $conn->query("DELETE FROM `users` WHERE `users`.`email` = '{$email}'");
 
 
-header('location: removeSTudent.php');
+header('location: removeStudent.php');
 
 ?>

@@ -78,6 +78,7 @@ table {
 
 #internalWrapper{
 	margin-top:60px;
+  margin-bottom: 0px;
 }
 	#wrapper {
 			width: 80%;

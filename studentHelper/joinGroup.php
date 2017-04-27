@@ -4,7 +4,11 @@ if(!$_SESSION['loggedIn']) {
 	header('location: index.php');
 }
 
-require("joinGroupDisplay.php");
+require 'Database/configure.php';
+$_POST['submit']='false';
+$conn=mysqli_connect(DB_SERVER, DB_USER, DB_PASS, MYSQL_DB);
+
+//require("joinGroupDisplay.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +17,7 @@ require("joinGroupDisplay.php");
 	<meta charset="UTF-8">
 	<title>Join Group</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
-	<script src="javascriptjs">
+	<script src="javascript.js">
 	</script>
 </head>
 <body>
@@ -41,27 +45,60 @@ require("joinGroupDisplay.php");
 				</li>
 			</ul>
 		</nav>
-		<!--
+		<?PHP
 
-		<section id="internalWrapper">
-			<div class="row cf">
-				<div class="half">
-					<form name="display" action="joinGroup.php" method="POST" >
-						<div class="row cf">
-							<div class="full">
-							<a href="joinGroup.html">Search by subject</a>
-						</div>
+		$groups="SELECT * FROM studyGroup";
+
+		$result=$conn->query($groups);
+
+		echo 		"<body>
+						  <section id='externalWrapper'>
+						   <section id='internalWrapper'>";
+
+		while($row= $result->fetch_assoc()) {
+
+		echo
+		"    <div class='row cf'>
+					<div class='half'>
+						<form name='display' action='joinAGroup.php' method='POST' >
+		          <div class='row cf'>
+		            <div class='row cf'>
+		              <br>
+		              <p class='inputName'>Study Group Name: {$row['studyName']} </p>
+		              </div>
+		              <div class='row cf'>
+		              <br>
+		              <p class='inputName'>Study Group Location: {$row['room']} </p>
+		              </div>
+		              <div class='row cf'>
+		              <br>
+		              <p class='inputName'>Study Group Date: {$row['date']} </p>
+		              </div>
+		              <div class='row cf'>
+		              <br>
+		              <p class='inputName'>Study Group Time:  {$row['time']} </p>
+		              </div>
+									<input name='studyGroupName' hidden='true' required='true' type='text' value='{$row['studyName']}'>
+		              <br>
+									<p class='inputName'>Max Study Group Students: {$row['studyGroupMaxStudents']} </p>
+									<br>
+									<p class='inputName'>Does Study room have projector? {$row['projector']} </p>
+		              <button id='submit'  class='button' onClick='groupJoined();'>Join Group</button>
+		            </div>
+		          </div>
+		        </form>
 					</div>
-					<div class="row cf">
-						<div class="half">
-								<li>Study Room Name:</li><li><input type="text" name="studyName" /></li>
-								<li><input type="submit" name="submit" /></li>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
+				</div>";
+
+		}
+		echo "			<br>
+							<br>
+							<br>
+							<br>
+						</section>
+					</section>
+				</body>";
+?>
 	</section>
 	<footer>
 				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>

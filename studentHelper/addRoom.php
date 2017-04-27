@@ -10,7 +10,7 @@ if(!$_SESSION['loggedIn']) {
 	<meta charset="UTF-8">
 	<title>Create Group</title>
 	<link href="stylesheet2.css" rel="stylesheet" type="text/css">
-	<!--<script src="Javascript/JS.js">-->
+	<script src="javascript.js">
 	</script>
 </head>
 <body>
@@ -85,7 +85,7 @@ if(!$_SESSION['loggedIn']) {
 					</div>
 					<div class="row cf">
 						<div class="quarter">
-							<input type="submit" id="submit" class="button" value="Submit" onclick="successfull()">
+							<input type="submit" id="submit" class="button" value="Submit" onclick="roomAdded()">
 						</div>
 					</div>
 				</form>
