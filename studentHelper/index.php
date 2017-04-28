@@ -5,6 +5,7 @@ if($_SESSION["loggedIn"]==true){
 	//If the user is already logged in and they try to access this page, they will be redirected to the main page
 	header('location: mainPage.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,10 +32,7 @@ if($_SESSION["loggedIn"]==true){
 					<form action="login.php" method="post">
 					<!--The form will run login.php when the form is submitted using the POST method. POST is used as sensitive data is being transmitted (password) and so GET would be irresponsible as this would put the user's password in the address bar.-->
 						<div class="row cf">
-							<div class="full">
-							<!--Gives the containing items the full width of the parent to fill so that nothing will be placed next to it.-->
-								<h1>Login</h1>
-							</div>
+							<h1>Login</h1>
 						</div>
 						<div class="row cf">
 							<div class="half">
@@ -42,7 +40,7 @@ if($_SESSION["loggedIn"]==true){
 								<!--Informs the user what piece of information is required from them-->
 							</div>
 							<div class="half">
-								<input id="Email" name="Email" type="text" placeholder="example@studentHelper.co.uk" required>
+								<input id="Email" name="Email" type="email" placeholder="example@studentHelper.co.uk" required>
 								<!--Placeholder gives the user an example of what they need to provide-->
 							</div>
 						</div>
