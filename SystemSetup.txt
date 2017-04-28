@@ -1,30 +1,40 @@
 StudentHelperProject
+
 Quick Setup Guide:
+
 1. Start a webserver from the studentHelper folder.
 2. Start a mysql database server using the studentHelper.sql file.
 3. Locate the configure.sql file in studentHelper/Database and ensure the values of the database server ip, user and pass correspond with your previously created database.
 4. Open a browser and enter you web server IP.
 5. You will now be presented with a login page. Further info in Use Guide.
-Step-by-step accessing project via localhost (testing):
+
+Step-by-step setup guide for accessing project via localhost:
+
 Step 1: Download XAMPP (https://www.apachefriends.org/index.html)
 Step 2: Copy the contents of the studentHelper folder into the htdocs folder of XAMPP .
 Step 3: "Start" both the Apache webserver and MySQL server.
-Step 4: After the server has started, open any web browser and enter http://localhost/phpmyadmin/ . Using this interface we can manage the MySQL server from the web browser.
+Step 4: After the server has started, open any web browser and enterÂ http://localhost/phpmyadmin/Â . Using this interface we can manage the MySQL server from the web browser.
 Step 5: select SQL tab from the panel. This will open the SQL tab where we can run the SQL queries.
 Step 6: type the following query in the text area and click Go: UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='root'; FLUSH PRIVILEGES;
-Step 7: Open the XAMPP file /phpmyadmin/config.inc.php in your favorite text editor. Search for the string: $cfg['Servers'][$i]['password'] = ''; 
+Step 7: Open the XAMPP file /phpmyadmin/config.inc.php in your favorite text editor.
+Search for the string: $cfg['Servers'][$i]['password'] = ''; 
 and change it to this:
 $cfg['Servers'][$i]['password'] = 'password'; 
-Here the ‘password’ is what we set to the root user using the SQL query.
+Here the â€˜passwordâ€™ is what we set to the root user using the SQL query.
 Step 8: Save the config.inc.php file and restart the XAMPP server.
-Step 9: Open http://localhost/phpmyadmin/ once again.
-Step 10: select the Import tab from the panel. here you can select to Import the studentHelper.sql database found press Go. You can now exit http://localhost/phpmyadmin/ and setup is complete. The website can be found at http://localhost .
-Site use guide: 
+Step 9: OpenÂ http://localhost/phpmyadmin/Â once again.
+Step 10: select the Import tab from the panel. here you can select to Import the studentHelper.sql database found press Go. You can now exit http://localhost/phpmyadmin/ and setup is complete. The website can be found atÂ http://localhostÂ .
+
+Site-use guide: 
+
 The site homepage displays a login page. Along with an option to sign up a new user (of type Student).
 Some test logins are already created: 
-email: lect@test.com password: password 
-email: stud@test.com password: password
+email:Â lect@test.comÂ password: password 
+email:Â stud@test.comÂ password: password
+
 Using the lect login will take you to the Lecturer main page and using the student login will take you to the student main page. (login.php validates if the usertype is = lect or = stud) You can logout by clicking "logout" in the navigation.
+
 Lecturers can remove students from the system by entering their email on the remove student page. Lecturers can add rooms (lecturers state if the rooms have a projector and how many students can fit in the room) , once added, the rooms can be selected on the students "create study group" page. 
+
 Once students have created a study group they can add themselves to studygroups via the join group page.
 Via the route finder page on the student site students are able to quickly see the route between various buildings such a university library, Lion gate building and Buckingham building (these have been manually added to the html and are not accessed through a database).
