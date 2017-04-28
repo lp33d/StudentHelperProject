@@ -1,4 +1,4 @@
-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `studenthelper`
 --
-create database studenthelper;
-use studenthelper;
+CREATE DATABASE studenthelper;
+USE studenthelper;
 -- --------------------------------------------------------
 
 --
@@ -111,3 +111,50 @@ ALTER TABLE `room`
 ALTER TABLE `studygroup`
   ADD PRIMARY KEY (`studyID`),
   ADD KEY `studyID` (`studyID`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `Email` (`Email`),
+  ADD KEY `Email_2` (`Email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `instudygroup`
+--
+ALTER TABLE `instudygroup`
+  MODIFY `joinID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+--
+-- AUTO_INCREMENT for table `room`
+--
+ALTER TABLE `room`
+  MODIFY `roomID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+--
+-- AUTO_INCREMENT for table `studygroup`
+--
+ALTER TABLE `studygroup`
+  MODIFY `studyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `instudygroup`
+--
+ALTER TABLE `instudygroup`
+  ADD CONSTRAINT `studyGroup` FOREIGN KEY (`studyGroup_FK`) REFERENCES `studygroup` (`studyID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `user` FOREIGN KEY (`user_FK`) REFERENCES `users` (`ID`) ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
