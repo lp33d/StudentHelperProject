@@ -1,3 +1,11 @@
+<?php
+session_start();
+//Starts a php session so that if one hasn't already been started, there isn't an issue caused by calling a session variable
+if($_SESSION["loggedIn"]==true){
+	//If the user is already logged in and they try to access this page, they will be redirected to the main page
+	header('location: mainPage.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
