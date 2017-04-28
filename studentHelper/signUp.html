@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link href="stylesheet.css" rel="stylesheet" type="text/css">
-	<link rel="icon" type="image/png" href="images/favicon.ico">
-  <script type="text/javascript" src="javascript.js"></script>
+	<meta charset="UTF-8">
+	<title>Sign Up</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="favicon.ico" rel="icon" type="image/png">
+	<script src="javascript.js" type="text/javascript">
+	</script>
+	<script>
+	   //Initialises the scripts
+	   window.onload = function(){
+	       document.getElementById("email").addEventListener("change",compareEmail);
+		   //Adds a link to the element with id 'email' so that the function 'compareEmail' runs whenever the content is changed
+	       document.getElementById("confirmEmail").addEventListener("change",compareEmail);
+	   };
+	</script>
 </head>
-
 <body>
-  <section id="externalWrapper">
-    <h2 style="display:none;">.</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.php" id="logo">Student Helper</a>
-        </li>
-      </ul>
-    </nav>
+	<section id="externalWrapper">
+		<!--Container for everything other than the footer-->
+		<nav>
+			<ul>
+				<li>
+					<a href="index.php" id="logo">Student Helper</a>
+				</li>
+			</ul>
+		</nav>
 		<section id="internalWrapper">
+			<!--Container for the main content of the page-->
 			<div class="row cf">
-				<h2>Sign Up</h2>
+				<!--Allows for the items to be aligned in a row-->
+				<h1>Sign Up</h1>
 			</div>
 			<form action="signUp.php" method="post">
+				<!--The form will run signUp.php when the form is submitted using the POST method. POST is used as sensitive data is being transmitted (password) and so GET would be irresponsible as this would put the user's password in the address bar.-->
 				<div class="row cf">
 					<div class="half">
+						<!--Gives the containing items half the width of the parent to fill, expands when the page dimensions hit a breakpoint to 100%-->
 						<p class="inputName">First name:</p>
+						<!--Informs the user what piece of information is required from them-->
 					</div>
 					<div class="half">
-						<input name="fName" type="text" required>
+						<input name="fName" required="" type="text"> 
+						<!--Due to the field being required, the form can't be submitted if the field is empty-->
 					</div>
 				</div>
 				<div class="row cf">
@@ -36,7 +50,7 @@
 						<p class="inputName">Last name:</p>
 					</div>
 					<div class="half">
-						<input name="lName" type="text" required>
+						<input name="lName" required="" type="text">
 					</div>
 				</div>
 				<div class="row cf">
@@ -44,7 +58,8 @@
 						<p class="inputName">Email address:</p>
 					</div>
 					<div class="half">
-						<input name="email" type="email" id=email required>
+						<input id="email" name="Email" placeholder="example@studentHelper.co.uk" required="" type="email"> 
+						<!--Placeholder gives the user an example of what they need to provide-->
 					</div>
 				</div>
 				<div class="row cf">
@@ -52,7 +67,8 @@
 						<p class="inputName">Confirm email address:</p>
 					</div>
 					<div class="half">
-						<input name="confirmEmail" type="email" id=confirmEmail required>
+						<input id="confirmEmail" name="confirmEmail" placeholder="example@studentHelper.co.uk" required="" type="email"> <img class="confirm" id="emailValid"> 
+						<!--Location for the tick or cross depending on the validity of the emails-->
 					</div>
 				</div>
 				<div class="row cf">
@@ -60,29 +76,26 @@
 						<p class="inputName">Password:</p>
 					</div>
 					<div class="half">
-						<input name="password" type="password" id=password required>
+						<input id="password" name="password" required="" type="password">
 					</div>
 				</div>
 				<div class="row cf">
 					<div class="half">
-            <button type="reset" class="button" id="reset">Reset</button>
+						<button class="button" id="reset" type="reset">Reset</button>
+						<!--Resets the form-->
 					</div>
 					<div class="half">
-						<button id="submit" name="submit" class="button">Submit</button>
-
+						<button class="button" id="submit" name="submit">Submit</button>
+						<!--Submits the form-->
 					</div>
 				</div>
-			</form>
-      <a href="index.php" class ="button" id="back">Go Back</a>
+			</form><a class="button" href="index.php" id="back">Go Back</a> 
+			<!--Returns the user to the login page-->
 		</section>
 	</section>
-  <footer>
-				<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-				<a href="http://jigsaw.w3.org/css-validator/check/referer">
-					<img style="border:0;width:88px;height:31px"
-						src="http://jigsaw.w3.org/css-validator/images/vcss"
-						alt="Valid CSS!" />
-				</a>
-			</footer>
+	<footer>
+		<a href="http://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss" style="border:0;width:88px;height:31px"></a>
+	</footer>
 </body>
 </html>
