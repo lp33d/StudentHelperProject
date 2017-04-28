@@ -57,7 +57,7 @@ if(!$_SESSION['loggedIn']) {
 				<div class="third">
 					<a href="courseworkDropoffStud.php"><img alt="" src="St_Images/dropOfExample.gif">
 					<h3>Find the course work drop off point</h3>
-					<p>Look up what course work drop off point are located</p></a>
+					<p>Look up where course work drop off points are located</p></a>
 				</div>
 			</div>
 		</section>
